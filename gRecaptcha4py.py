@@ -31,11 +31,11 @@ class grecaptcha(object):
 
         else:
             self.success = False
-            if(!secret):
+            if(not secret):
                 self.error_codes = "missing-input-secret"
-            elif(!response):
+            elif(not response):
                 self.error_codes = "missing-input-response"
-            elif(!remoteip):
+            elif(not remoteip):
                 self.error_codes = "missing-input-remoteip"
             else:
                 self.error_codes = "something else"
