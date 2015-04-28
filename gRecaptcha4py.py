@@ -27,7 +27,7 @@ class grecaptcha(object):
             resp = json.load(APIresponse)
             
             self.success = resp["success"]
-            self.error_codes = resp["error-codes"]
+            self.error_codes = resp["error-codes"] if not self.success else ""
 
         else:
             self.success = False
